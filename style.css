@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap');
+body{
+    background: url('images/FAQ.png') no-repeat center center/ cover;
+    height: 100vh;
+    font-family: 'Monserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq-container{
+    background-color: #fff;
+    width: 65%;
+    border-radius: 10px;
+    box-shadow: 0 0 5px white;
+    padding: 0 20px;
+}
+
+.faq{
+    position: relative;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.question{
+    cursor: pointer;
+    font-size: 22px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+    transition: .5s;
+}
+
+.question::after{
+    padding-left: 10px;
+    content: "+";
+    position: absolute;
+    right: 5px;
+}
+
+.ans{
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+    height: 0px;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.ans:last-child{
+    margin-bottom: 20px;
+}
+
+.active .ans{
+    height: 100px;
+    overflow: auto; 
+}
+
+.active .question{
+    font-size: 18px;
+}
+
+.active .question::after{
+    content: "-";
+}
+
+@media only screen and (max-width: 560px) {
+    .title{
+        font-size: 1.5rem;
+        transition: .5s;
+    }
+
+    .question{
+        font-size: 18px;
+    }
+
+    body{
+        background-repeat: repeat;
+    }
+
+    .active .ans{
+        height: 150px;
+        overflow: auto; 
+    }
+
+    .active .question{
+        font-size: 16px;
+    }
+
+    .ans{
+        font-size: 16px;
+    }
+}
